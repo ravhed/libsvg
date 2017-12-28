@@ -1,8 +1,9 @@
 # libsvg - a library for SVG files
-======
 
 libsvg library with a Visual Studio 2017 project. Dependencies are available as well in this repository if somebody wants to compile it as a dynamic library.
+
 All dependencies except uriparser was downloaded from http://www.gisinternals.com. See http://uriparser.sourceforge.net/ for uriparser.
+
 Source code was retrieved from https://sourceforge.net/projects/svg2swf/ - this version has several fixes to the libsvg library. 
 
 Description
