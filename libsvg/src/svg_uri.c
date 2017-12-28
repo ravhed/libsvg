@@ -499,6 +499,14 @@ _svg_string_is_abs_filename(const char *uri_str)
 	int isAbsFileName = ((uri_str[0] >= 'a' && uri_str[0] <= 'z') || (uri_str[0] >= 'A' && uri_str[0] <= 'Z')) &&
 		uri_str[1] == ':';
 
+	// Check if it is a UNC path (if it begins with two backslashes)
+	// If it is a unc path it is an absolute filename
+	if (!isAbsFileName) {
+		if (uri_str[0] == '\\' && uri_str[1] == '\\') {
+			isAbsFileName = 1;
+		}
+	}
+
 	return isAbsFileName;
 #else
 	return uri_str[0] == '/';
